@@ -1,0 +1,23 @@
+// Half Subtractor Verilog Code in Data Flow Modeling
+
+module half_subtractor(a,b,out,bor);
+input a,b;
+output out,bor;
+assign out= a^b;
+assign bor=~a&b;
+endmodule
+
+TESTBENCH
+
+module half_subtractor_tb();
+reg a,b;
+wire out,bor;
+half_subtractor h1(a,b,out,bor);
+initial begin
+a=0; b=0;
+#10 a=0; b=1;
+#10 a=1; b=0;
+#10 a=1; b=1;
+#10 $stop
+end
+endmodule
