@@ -11,7 +11,7 @@ endmodule
 TESTBENCH
 
 
-module half_subtractor_tb();
+module full_subtractor_tb();
 reg a,b,cin;
 wire out,bor;
 full_subtractor w1(a,b,cin,out,bor);
